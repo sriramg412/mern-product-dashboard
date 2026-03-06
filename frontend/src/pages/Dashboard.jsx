@@ -11,7 +11,7 @@ function Dashboard() {
 
     const fetchProducts = async () => {
         try {
-            const res = await axios.get("https://mern-product-dashboard-e7fs.onrender.com/api/products");
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/products`);
             setProducts(res.data);
         } catch (err) {
             console.error(err);

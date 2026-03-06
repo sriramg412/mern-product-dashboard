@@ -13,7 +13,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: "https://mern-product-dashboard.vercel.app",
+    origin: ["https://mern-product-dashboard.vercel.app", "http://localhost:5173"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
