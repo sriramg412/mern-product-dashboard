@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
     const [products, setProducts] = useState([]);
-    const [activeModal, setActiveModal] = useState(null); // 'products', 'categories', 'users', or null
+    const [activeModal, setActiveModal] = useState(null);
     const navigate = useNavigate();
 
     const fetchProducts = async () => {
@@ -80,7 +80,7 @@ function Dashboard() {
 
             </div>
 
-            {/* Products Modal */}
+
             <Modal
                 isOpen={activeModal === 'products'}
                 onClose={() => setActiveModal(null)}
@@ -116,7 +116,7 @@ function Dashboard() {
                 </div>
             </Modal>
 
-            {/* Categories Modal */}
+
             <Modal
                 isOpen={activeModal === 'categories'}
                 onClose={() => setActiveModal(null)}
@@ -138,7 +138,6 @@ function Dashboard() {
                 </div>
             </Modal>
 
-            {/* Users Modal */}
             <Modal
                 isOpen={activeModal === 'users'}
                 onClose={() => setActiveModal(null)}

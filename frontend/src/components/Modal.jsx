@@ -5,7 +5,7 @@ function Modal({ isOpen, onClose, title, children }) {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity">
             <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg mx-4 overflow-hidden flex flex-col max-h-[85vh]">
 
-                {/* Header */}
+
                 <div className="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-gray-50">
                     <h2 className="text-xl font-bold text-gray-800">{title}</h2>
                     <button
@@ -18,7 +18,7 @@ function Modal({ isOpen, onClose, title, children }) {
                     </button>
                 </div>
 
-                {/* Content */}
+
                 <div className="p-6 overflow-y-auto flex-1">
                     {children}
                 </div>

@@ -18,7 +18,7 @@ function ProductTable({ products, refresh, setEditingProduct }) {
 
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
 
-            {/* Table Header */}
+
             <div className="px-6 py-4 border-b bg-gray-50">
                 <h2 className="text-lg font-semibold text-gray-700">
                     Product List
