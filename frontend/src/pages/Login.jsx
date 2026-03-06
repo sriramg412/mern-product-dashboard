@@ -15,7 +15,7 @@ function Login() {
     try {
 
       const res = await axios.post(
-        "https://mern-product-dashboard-e7fs.onrender.com/api/products",
+        "https://mern-product-dashboard-e7fs.onrender.com/api/auth/login",
         { email, password }
       );
 
