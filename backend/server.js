@@ -14,6 +14,9 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("MERN Product Dashboard API is running 🚀");
+});
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 
