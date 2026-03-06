@@ -5,7 +5,7 @@ function ProductTable({ products, refresh, setEditingProduct }) {
     const deleteProduct = async (id) => {
         try {
             if (window.confirm("Are you sure you want to delete this product?")) {
-                await axios.delete(`http://localhost:5000/api/products/${id}`);
+                await axios.delete(`https://mern-product-dashboard-e7fs.onrender.com/api/product/${id}`);
                 refresh();
             }
         } catch (err) {

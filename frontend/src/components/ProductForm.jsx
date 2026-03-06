@@ -23,7 +23,7 @@ function ProductForm({ refresh, editingProduct, setEditingProduct }) {
         try {
             if (editingProduct) {
                 
-                await axios.put(`http://localhost:5000/api/products/${editingProduct._id}`, {
+                await axios.put(`https://mern-product-dashboard-e7fs.onrender.com/api/product/${editingProduct._id}`, {
                     name,
                     price,
                     category,
@@ -31,7 +31,7 @@ function ProductForm({ refresh, editingProduct, setEditingProduct }) {
                 setEditingProduct(null);
             } else {
                
-                await axios.post("http://localhost:5000/api/products/add", {
+                await axios.post("https://mern-product-dashboard-e7fs.onrender.com/api/product", {
                     name,
                     price,
                     category,
