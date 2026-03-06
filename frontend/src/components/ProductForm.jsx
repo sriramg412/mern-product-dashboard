@@ -22,16 +22,16 @@ function ProductForm({ refresh, editingProduct, setEditingProduct }) {
         e.preventDefault();
         try {
             if (editingProduct) {
-                
-                await axios.put(`https://mern-product-dashboard-e7fs.onrender.com/api/product/${editingProduct._id}`, {
+
+                await axios.put(`https://mern-product-dashboard-e7fs.onrender.com/api/products/${editingProduct._id}`, {
                     name,
                     price,
                     category,
                 });
                 setEditingProduct(null);
             } else {
-               
-                await axios.post("https://mern-product-dashboard-e7fs.onrender.com/api/product", {
+
+                await axios.post("https://mern-product-dashboard-e7fs.onrender.com/api/products/add", {
                     name,
                     price,
                     category,
