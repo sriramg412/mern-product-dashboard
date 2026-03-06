@@ -32,19 +32,19 @@ function ProductTable({ products, refresh, setEditingProduct }) {
                     <thead className="bg-gray-100">
                         <tr>
 
-                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase">
+                            <th className="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase whitespace-nowrap">
                                 Product Name
                             </th>
 
-                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase">
+                            <th className="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase whitespace-nowrap">
                                 Price
                             </th>
 
-                            <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase">
+                            <th className="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-gray-600 uppercase whitespace-nowrap">
                                 Category
                             </th>
 
-                            <th className="px-6 py-3 text-right text-xs font-semibold text-gray-600 uppercase">
+                            <th className="px-4 sm:px-6 py-3 text-right text-xs font-semibold text-gray-600 uppercase whitespace-nowrap">
                                 Actions
                             </th>
 

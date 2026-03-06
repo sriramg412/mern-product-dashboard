@@ -28,11 +28,11 @@ function Products() {
     return (
         <Layout>
             <div className="w-full">
-                <div className="flex justify-between items-center mb-6">
-                    <h1 className="text-2xl font-bold text-gray-800">Products Management</h1>
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 mb-6">
+                    <h1 className="text-xl sm:text-2xl font-bold text-gray-800">Products Management</h1>
                     <button
                         onClick={() => navigate("/add-product")}
-                        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition shadow-sm font-medium"
+                        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition shadow-sm font-medium w-full sm:w-auto"
                     >
                         + Add Product
                     </button>
