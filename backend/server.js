@@ -11,12 +11,20 @@ const app = express();
 
 connectDB();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://mern-product-dashboard.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("MERN Product Dashboard API is running 🚀");
 });
+
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 
