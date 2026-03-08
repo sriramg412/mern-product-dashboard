@@ -7,10 +7,12 @@ function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleRegister = async () => {
 
     try {
+      setLoading(true);
 
       const res = await axios.post(
         `${import.meta.env.VITE_API_URL}/auth/register`,
@@ -23,6 +25,8 @@ function Register() {
 
       alert("Registration failed: " + (err.response?.data?.message || err.message));
 
+    } finally {
+      setLoading(false);
     }
 
   };
@@ -60,9 +64,11 @@ function Register() {
 
           <button
             onClick={handleRegister}
-            className="w-full bg-green-600 text-white p-2 sm:p-3 rounded-lg hover:bg-green-700 transition font-medium text-sm sm:text-base"
+            disabled={loading}
+            className={`w-full text-white p-2 sm:p-3 rounded-lg transition font-medium text-sm sm:text-base ${loading ? "bg-green-400 cursor-not-allowed" : "bg-green-600 hover:bg-green-700"
+              }`}
           >
-            Register
+            {loading ? "Registering..." : "Register"}
           </button>
 
         </div>

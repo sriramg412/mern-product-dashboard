@@ -9,10 +9,12 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async () => {
 
     try {
+      setLoading(true);
 
       const res = await axios.post(
         `${import.meta.env.VITE_API_URL}/auth/login`,
@@ -30,6 +32,8 @@ function Login() {
 
       alert("Login failed");
 
+    } finally {
+      setLoading(false);
     }
 
   };
@@ -62,9 +66,11 @@ function Login() {
 
           <button
             onClick={handleLogin}
-            className="w-full bg-blue-600 text-white p-2 sm:p-3 rounded-lg hover:bg-blue-700 transition font-medium text-sm sm:text-base"
+            disabled={loading}
+            className={`w-full text-white p-2 sm:p-3 rounded-lg transition font-medium text-sm sm:text-base ${loading ? "bg-blue-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700"
+              }`}
           >
-            Login
+            {loading ? "Logging in..." : "Login"}
           </button>
 
         </div>
