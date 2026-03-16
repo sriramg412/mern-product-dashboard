@@ -12,7 +12,6 @@ function Login() {
   const [loading, setLoading] = useState(false);
 
   const handleLogin = async () => {
-
     try {
       setLoading(true);
 
@@ -29,13 +28,12 @@ function Login() {
       }
 
     } catch (err) {
-
-      alert("Login failed");
-
+      console.error("Login error details:", err);
+      const errorMessage = err.response?.data?.message || "Login failed - Network error or server offline";
+      alert(errorMessage);
     } finally {
       setLoading(false);
     }
-
   };
 
   return (
